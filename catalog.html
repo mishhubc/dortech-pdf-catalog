@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Example</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+		/>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			:root {
+				--yellowH: #ffc000;
+				--secondYellow: #fcd452;
+				--blue: #1576c4;
+				--mainGreen: #7bb647;
+			}
+			/* First page styles */
+			/* =======don't touch this ======== */
+			.catalog {
+				width: 1200px;
+				height: 1916px;
+			}
+			/* =======don't touch this ======== */
+
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
+			.banner {
+				position: relative;
+				width: 100%;
+			}
+			.banner img {
+				width: 300px;
+				border-radius: 10px;
+				margin-top: 30px;
+				margin-left: 60px;
+				transform: translateX(-10px);
+			}
+
+			.square {
+				width: 100px;
+				height: 100px;
+				background-color: var(--yellowH);
+				opacity: 0.9;
+				position: absolute;
+				top: 80%;
+				left: 24%;
+				z-index: -1;
+				border-radius: 5px;
+			}
+			.square2 {
+				top: 2%;
+				left: 2%;
+			}
+			img.swiat {
+				position: absolute;
+				right: 0;
+				top: 30%;
+				width: 800px;
+				height: auto;
+				z-index: -1;
+			}
+			.katalog-title {
+				position: absolute;
+				left: 30%;
+				top: 280%;
+
+				margin-bottom: 20px;
+				font-size: 60px;
+				color: rgb(26, 22, 22);
+				transform: translate(-50%, -50%);
+			}
+			h1.katalog-title.katolog-title-2 {
+				left: 15%;
+				top: 164%;
+			}
+			.page {
+				width: 100%;
+				height: 100%;
+			}
+			.page1-container,
+			.page2-container,
+			.page3-container {
+				position: relative;
+			}
+			.page3-container {
+				position: relative;
+			}
+			.page1-container {
+				border: none;
+			}
+			.fa-arrow-right,
+			.fa-arrow-down {
+				font-size: 60px;
+				color: var(--yellowH);
+				top: 250%;
+				left: 3%;
+				position: absolute;
+			}
+			.first-page-motto {
+				position: absolute;
+				top: 40%;
+				left: 6%;
+			}
+			.first-page-contact-title {
+				font-size: 2em;
+			}
+			.first-page-contact {
+				position: absolute;
+				top: 55%;
+				left: 80%;
+				transform: translate(-50%, -30%);
+				margin-top: 10px;
+			}
+			.box {
+				padding: 10px;
+				border-left: none;
+				border-right: none;
+				border-width: 50%;
+				opacity: 0.9px;
+				line-height: 1.2;
+				font-size: 24px;
+				margin-right: 20px;
+			}
+			.box-header,
+			.box-body {
+				padding-top: 10px;
+				width: 300px;
+				line-height: 1.7;
+			}
+			.bottom-tasma {
+				width: 1200px;
+				height: 380px;
+				background-image: url('https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/239587527_335690291225328_3898578083795038298_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=YOkdeFSXVV8AX9nZ_A-&tn=wCbZkR52XST76tu7&_nc_ht=scontent-waw1-1.xx&oh=8aaadc241db175b18e716f3541b3ee63&oe=61915F4D');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.down-arrow {
+				position: absolute;
+				right: 8%;
+				top: 93%;
+			}
+			.box.remove-border {
+				border-top: none;
+			}
+			.box.remove-border-btm {
+				border-bottom: none;
+			}
+			/* Finish styles for first page */
+
+			/* Second page styles */
+			.box-header {
+				position: relative;
+				display: block;
+			}
+			.box-header:after {
+				background-color: var(--yellowH);
+				content: '';
+				display: inline-block;
+				height: 4px;
+				position: absolute;
+				vertical-align: middle;
+				width: 100%;
+				position: absolute;
+				top: 100%;
+				left: 0%;
+				transform: translate(-5%, 0%);
+			}
+			.second-page-text {
+				background-image: linear-gradient(
+					to right top,
+					#fafa6e,
+					#fafa6e,
+					#fafa6e,
+					#fafa6e,
+					#fafa6e
+				);
+				border: 4px double rgba(122, 181, 50, 0.74);
+				border-radius: 7px;
+			}
+			.page2-container {
+				padding: 20px;
+			}
+			.logos {
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				height: 100px;
+				gap: 10px;
+				align-items: center;
+			}
+			.logos img {
+				width: auto;
+				height: auto;
+			}
+
+			.page2-container {
+				z-index: -4;
+			}
+			.dortech-logo {
+				margin-right: 10px;
+			}
+			.titleS1 {
+				text-align: center;
+				margin-top: 60px;
+			}
+			.S1-wrapper {
+				display: flex;
+				position: relative;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				height: 300px;
+				margin-top: 50px;
+			}
+			.behind {
+				background-image: url('https://media.istockphoto.com/photos/textured-yellow-oil-paint-brush-stroke-isolated-on-white-background-picture-id1126458446?b=1&k=20&m=1126458446&s=170667a&w=0&h=2TqEvp2jFgW52JnKGm-I6i4JtRLePov4htHFA-IwXzk=');
+				width: 1000px;
+				height: 600px;
+				background-repeat: no-repeat;
+				background-position: cover;
+				position: absolute;
+				top: 14%;
+				left: 70%;
+				transform: translateX(-50%);
+				z-index: -1;
+			}
+			.front-image {
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 260px;
+				height: 230px;
+				border-radius: 10px;
+				background-position: center;
+			}
+			.front-image.first-front {
+				width: 300px;
+			}
+			.first-front {
+				background-image: url('https://media.istockphoto.com/photos/optimization-picture-id1269017110?b=1&k=20&m=1269017110&s=170667a&w=0&h=BOUNwxQHEjS7Q6_R4LhrFcMwXd0hm_U-gkXCMnu_neo=');
+			}
+			.first-second {
+				background-image: url('https://dortech.eu/uploads/offer_categories/128/945094b45795604637224ee9f16a2fb2.jpg');
+			}
+			.first-third {
+				background-image: url('https://media.istockphoto.com/photos/burning-fireplace-real-wood-logs-cozy-warm-home-at-xmas-time-picture-id1302919455?b=1&k=20&m=1302919455&s=170667a&w=0&h=cUeRyoqhMYk2--VO6kYVV9gZkWxROXcAiIOf3HjF0Xw=');
+			}
+			p {
+				font-size: inherit;
+				font-family: inherit;
+				line-height: 1.7;
+				text-align: left;
+				border: 1px solid #fafa6e;
+				border-radius: 10px;
+				margin-left: 10px;
+				padding: 10px;
+			}
+			.text {
+				width: 80%;
+				margin: 0 auto;
+				display: flex;
+				padding-top: 20px;
+				flex-direction: row;
+				align-items: flex-start;
+				margin-top: 80px;
+			}
+			.s1p-first {
+				background-image: url('https://www.dortech.eu/user_files/images/ceryfikat.jpg');
+				background-position: contain;
+			}
+			.s1p-second {
+				background-image: url('https://dortech.eu/uploads/products/24/97/b60d267cb2ede478fce4b4f600bd6c13.jpg');
+			}
+			.s1p-third {
+				background-image: url('https://www.lindab-polska.pl/pliki/newsy/nizp_2020_logo.png');
+				background-position: contain;
+			}
+			.second-half-text {
+				margin-top: 100px;
+			}
+			.front-imageS1-bazalt {
+				background-image: url('https://dortech.eu/uploads/products/25/166/6f31934d1f3b12ed6da168c835739890.jpg');
+			}
+			.front-image.front-imageS1-bazalt {
+				width: 430px;
+				height: 267px;
+			}
+
+			.second-page-text {
+				padding: 20px;
+				flex: 1;
+				background-image: linear-gradient(
+					to right top,
+					#fafa6e,
+					#fafa6e,
+					#fafa6e,
+					#fafa6e,
+					#fafa6e
+				);
+			}
+			.front-image.first-second {
+				flex: 0.6;
+			}
+			.bazaltS1 {
+				padding: 20px;
+				flex: 1;
+				background-image: linear-gradient(
+					to right top,
+					var(--mainGreen),
+					var(--mainGreen),
+					var(--mainGreen),
+					var(--mainGreen),
+					var(--mainGreen)
+				);
+			}
+			.hexagon {
+				position: relative;
+				width: 300px;
+				height: 173.21px;
+				background: #add8e6;
+				margin: 86.6px 0;
+				position: absolute;
+				top: 14%;
+				right: -150px;
+				transform: translateX(-50%);
+				z-index: -1;
+			}
+			.hexagon2 {
+				right: 149px;
+			}
+			.hexagon3 {
+				left: 452px;
+			}
+			.hexagon4 {
+				left: 153px;
+			}
+
+			.hexagon:before,
+			.hexagon:after {
+				content: '';
+				position: absolute;
+				width: 0;
+				border-left: 150px solid transparent;
+				border-right: 150px solid transparent;
+			}
+
+			.hexagon:before {
+				bottom: 100%;
+				border-bottom: 86.6px solid #add8e6;
+			}
+
+			.hexagon:after {
+				top: 100%;
+				width: 0;
+				border-top: 86.6px solid #add8e6;
+			}
+
+			.basaltImage-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+			}
+			.Sf1-wrapper {
+				display: flex;
+				justify-content: space-around;
+				margin-top: 155px;
+			}
+			/* ===========================page3====================================*/
+			.page-top-3,
+			.page-bottom-3 {
+				height: 48%;
+			}
+			.page-bottom-3 {
+				margin-top: 20px;
+			}
+			.s2-szkl {
+				background-image: url('https://dortech.eu/uploads/products/4/94/d634d4a7e0b087d32183965b8c72318d.jpg');
+				width: 430px;
+				height: 267px;
+			}
+			.s2-szkl0 {
+				background-image: url('https://media.istockphoto.com/photos/close-up-on-customer-man-hand-pressing-on-smartphone-screen-with-five-picture-id1303530194?b=1&k=20&m=1303530194&s=170667a&w=0&h=ukLDaFjMtkDjRMBX5sIx027Eu7OKYgaaEc5DyKFL5fc=');
+			}
+			.s2-szkl3 {
+				background-image: url('https://media.istockphoto.com/photos/partenership-picture-id466085231?b=1&k=20&m=466085231&s=170667a&w=0&h=-cidlG4YjwF-tIlLu6MZF5X2OvnyMQ_nYvBnLfyEk4k=');
+			}
+			.titleszk2 {
+				position: relative;
+				top: 2%;
+			}
+
+			/*================================ end page 3---======================= */
+
+			/* ===========================================page4.1 start ========================= */
+			.page4 {
+				display: flex;
+				flex-direction: column;
+			}
+			.page-top-4,
+			.page-bottom-4 {
+				height: 50%;
+			}
+			.s2-pleny-title {
+				text-align: center;
+				margin-top: 60px;
+			}
+
+			.square-s2pleny-wrapper {
+				position: relative;
+				width: 100%;
+				height: 75%;
+			}
+			.square-s2pleny {
+				position: absolute;
+				top: 28%;
+				right: 12%;
+				width: 300px;
+				height: 200px;
+				background: var(--yellowH);
+			}
+			.s2-pleny-shape {
+				position: relative;
+				top: 22%;
+				left: 59%;
+			}
+			.para-shape {
+				width: 400px;
+				position: absolute;
+				top: 14%;
+				left: 20%;
+			}
+			.background-shape {
+				background-image: url('https://snipstock.com/assets/cdn/png/new/613e61cedd7cfaa5fe6f56338f01df9e.png');
+				width: 400px;
+				height: 400px;
+				background-size: cover;
+				background-position: center center;
+				position: absolute;
+				bottom: 3%;
+				right: 23%;
+				transform: rotate(45deg);
+			}
+			.s2-pleny-second-text {
+				margin-top: 20px;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.center-text {
+				text-align: center;
+			}
+			/* ==========================================page 4.1 end============================= */
+
+			/* ============================page 4.2 start=========================== */
+
+			.title-s1ands2B {
+				margin-top: 20px;
+			}
+
+			.square2-pg-bottom {
+				width: 300px;
+				height: 187px;
+				background: var(--mainGreen);
+				position: relative;
+				top: 15%;
+				left: 17%;
+				z-index: -1;
+				border-radius: 5px;
+			}
+			.page4-secon-half-img {
+				position: relative;
+				top: 0%;
+				left: 21%;
+				border: 5px solid var(--mainGreen);
+				border-radius: 5px;
+				background-color: var(--mainGreen);
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+			}
+			.content-second-half {
+				display: flex;
+				flex: 1 1 33%;
+				margin-top: 120px;
+				justify-content: space-evenly;
+			}
+			.content-second-half p {
+				background-color: var(--mainGreen);
+				border-color: var(--mainGreen);
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+			}
+			.page4-line {
+				width: 40%;
+				height: 4px;
+				background: var(--mainGreen);
+			}
+			.page4-line-1 {
+				transform: translateX(549px) translateY(-73px);
+				width: 54%;
+			}
+			.page4-line-2 {
+				transform: translate(1022px, 96px) rotate(90deg);
+				width: 29%;
+				height: 6px;
+			}
+
+			/* ====================================page 4.2 end====================== */ ;
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="catalog page1-container">
+				<div class="page">
+					<div class="banner">
+						<img
+							src="https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/237084452_335690284558662_4494988052160367799_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=m9LgN1BDeC8AX9f6mUU&_nc_ht=scontent-waw1-1.xx&oh=b0950cdb5e78a132b53c4a3726b17d8f&oe=6190722A"
+							alt=""
+						/>
+						<div class="square"></div>
+						<div class="square square2"></div>
+						<div class="catalog-title">
+							<h1 class="katalog-title">Katalog produktów</h1>
+							<h1 class="katalog-title katolog-title-2">DORTECH.eu</h1>
+							<img
+								src="https://drive.google.com/uc?export=view&id=1KNhlFCILh4iOW9Nj3qDPMId9uAWk5m7X"
+								class="swiat"
+							/>
+						</div>
+					</div>
+					<div class="first-page-motto">
+						<div class="first-page-contact-title">Ciepło trzymamy w ryzach</div>
+					</div>
+					<div class="first-page-contact">
+						<div class="box remove-border">
+							<div class="box-header"><strong>Adres</strong></div>
+							<div class="box-body">ul. Rozwojowa 45 B 33-100</div>
+							<div class="box-body">Tarnów Polska/Poland</div>
+						</div>
+						<div class="box">
+							<div class="box-header"><strong>Adresy e-mail</strong></div>
+							<div class="box-body">biuro@dortech.eu</div>
+							<div class="box-body">dortech@dortech.eu</div>
+						</div>
+						<div class="box remove-border-btm">
+							<div class="box-header">
+								<strong>Dział techniczny</strong>
+							</div>
+							<div class="box-body">Tel. +48 609 605 195</div>
+						</div>
+					</div>
+					<div class="bottom-tasma"></div>
+					<div class="down-arrow">
+						<i class="fa fa-arrow-down"></i>
+					</div>
+				</div>
+			</div>
+			<div class="catalog page2-container">
+				<div class="page">
+					<div class="logos">
+						<div class="dortech-logo">
+							<img
+								src="https://www.dortech.eu/user_files/images/logo(1).png"
+								alt=""
+							/>
+						</div>
+						<div class="">
+							<img
+								src="https://www.dortech.eu/user_files/images/logo-dwa.png"
+								alt=""
+							/>
+						</div>
+					</div>
+					<h1 class="titleS1">SZNURY SZYDEŁKOWE SZKLANE S1</h1>
+					<div class="S1-wrapper">
+						<div class="front-image first-front"></div>
+						<div class="front-image first-second"></div>
+						<div class="front-image first-third"></div>
+					</div>
+					<div class="behind"></div>
+					<div class="text">
+						<p class="second-page-text">
+							Produkowane są z przędzy z teksturowanego włókna szklanego.
+							Wykonujemy je w technice dziania, na cylindrycznych głowicach
+							zaplatających, stosując podstawowy typ łączenia szydełkowego
+							przędzy S1. kotłów.
+						</p>
+						<p class="second-page-text">
+							Takie wykonanie powoduje, że w sznurze jest uwięziona duża ilość
+							powietrza, które zwiększa właściwości izolacyjne produktu.
+							Zastosowanie: jako uszczelnienia do połączeń systemów kominowych z
+							urządzeniami grzewczymi, a także do uszczelnienia drzwiczek
+							kominków, pieców lub
+						</p>
+					</div>
+					<div class="second-half-text">
+						<h1 class="titleS1">SZNUR SZKLANY S1 PEŁNY</h1>
+						<div class="Sf1-wrapper">
+							<div class="front-image s1p-first"></div>
+							<div class="front-image s1p-second"></div>
+							<div class="front-image s1p-third"></div>
+						</div>
+						<div class="text text--second_page">
+							<p class="second-page-text">
+								Produkowane są z przędzy z teksturowanego włókna szklanego.
+								Wykonujemy je w technice dziania, na cylindrycznych głowicach
+								zaplatających, stosując podstawowy typ łączenia szydełkowego
+								przędzy S1.
+							</p>
+
+							<p class="second-page-text">
+								Wersja pełna posiada rdzeń wprowadzany w trakcie zaplotu. Jest
+								to uzasadnione od średnicy fi 14 mm.
+							</p>
+							<p class="second-page-text">
+								Zastosowanie: jako uszczelnienia do połączeń systemów kominowych
+								z urządzeniami grzewczymi, a także do uszczelnienia drzwiczek
+								kominków, pieców lub kotłów.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catalog page3-container">
+				<div class="page">
+					<div class="page-top-3">
+						<div class="logos">
+							<div class="dortech-logo">
+								<img
+									src="https://www.dortech.eu/user_files/images/logo(1).png"
+									alt=""
+								/>
+							</div>
+							<div class="">
+								<img
+									src="https://www.dortech.eu/user_files/images/logo-dwa.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<h1 class="titleS1">SZNUR BAZALTOWY S1 I S1 PEŁNY</h1>
+						<div class="S1-wrapper basaltImage-wrapper">
+							<div class="front-image front-imageS1-bazalt"></div>
+						</div>
+						<div class="hexagon"></div>
+						<div class="hexagon hexagon2"></div>
+						<div class="hexagon hexagon3"></div>
+						<div class="hexagon hexagon4"></div>
+						<div class="text text-top-3">
+							<p class="bazaltS1">
+								Produkowane są z przędzy z teksturowanego włókna bazaltowego.
+								Wykonujemy je w technice dziania, na cylindrycznych głowicach
+								zaplatających, stosując podstawowy typ łączenia szydełkowego
+								przędzy S1. Takie wykonanie powoduje, że w sznurze jest
+								uwięziona duża ilość powietrza, które zwiększa właściwości
+								izolacyjne produktu.
+							</p>
+							<p class="bazaltS1">
+								Zastosowanie: jako uszczelnienia do połączeń systemów kominowych
+								z urządzeniami grzewczymi, a także do uszczelnienia drzwiczek
+								kominków, pieców lub kotłów.
+							</p>
+							<p class="bazaltS1">
+								Produkujemy wersje z rdzeniem lub bez rdzenia. Rodzaj surowca
+								zwiększa wytrzymałość sznura aż do 700 st. C.
+							</p>
+						</div>
+					</div>
+					<div class="page-bottom-3">
+						<h1 class="titleS1 titleszk2">SZNUR SZYDEŁKOWY SZKLANY S2</h1>
+						<div class="S1-wrapper">
+							<div class="front-image s2-szkl0"></div>
+							<div class="front-image s2-szkl"></div>
+							<div class="front-image s2-szkl3"></div>
+						</div>
+						<div class="text text--second_page">
+							<p class="second-page-text">
+								Produkowane są z przędzy z teksturowanego włókna szklanego.
+								Wykonujemy je w technice dziania, na cylindrycznych głowicach
+								zaplatających, stosując specjalny typ łączenia szydełkowego
+								przędzy S2. Takie wykonanie powoduje, że produkt jest mniej
+								sprężysty i bardziej poddaje się modelowaniu w miejscu
+								zastosowania.
+							</p>
+
+							<p class="second-page-text">
+								Podobnie jak produkty S1, stosowane są jako uszczelnienia do
+								połączeń systemów kominowych z urządzeniami grzewczymi, a także
+								do uszczelnienia drzwiczek kominków, pieców lub kotłów.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catalog page4-container">
+				<div class="page page4">
+					<div class="page-top-4">
+						<div class="logos">
+							<div class="dortech-logo">
+								<img
+									src="https://www.dortech.eu/user_files/images/logo(1).png"
+									alt=""
+								/>
+							</div>
+							<div class="">
+								<img
+									src="https://www.dortech.eu/user_files/images/logo-dwa.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<h1 class="s2-pleny-title">SZNUR SZKLANY S2 PEŁNY</h1>
+						<div class="square-s2pleny-wrapper">
+							<div class="square-s2pleny"></div>
+							<img
+								class="s2-pleny-shape"
+								src="https://dortech.eu/uploads/products/27/95/77706fcbe1916ecfaa810ae4cbbc8237.jpg"
+								alt=""
+								width="300"
+								height="auto"
+							/>
+							<div class="para-shape">
+								<p class="second-page-text">
+									Produkowane są z przędzy z teksturowanego włókna szklanego.
+									Wykonujemy je w technice dziania, na cylindrycznych głowicach
+									zaplatających, stosując specjalny typ łączenia szydełkowego
+									przędzy S2.
+								</p>
+								<p class="second-page-text s2-pleny-second-text">
+									Wprowadzenie rdzenia powoduje ustabilizowanie produktu pod
+									względem wymiarowym. Podobnie jak produkty S1, stosowane są
+									jako uszczelnienia do połączeń systemów kominowych z
+									urządzeniami grzewczymi, a także do uszczelnienia drzwiczek
+									kominków, pieców lub kotłów.
+								</p>
+							</div>
+							<div class="background-shape"></div>
+						</div>
+					</div>
+					<div class="page-bottom-4">
+						<h1 class="title-s1ands2B center-text">
+							SZNUR BAZALTOWY S2 I S2 PEŁNY
+						</h1>
+						<div class="square2-pg-bottom"></div>
+
+						<img
+							class="page4-secon-half-img"
+							src="https://dortech.eu/uploads/products/28/155/418049401870a60cdb58544e238ec67c.jpg"
+							alt=""
+							width="300"
+							height="auto"
+						/>
+						<div class="page4-line page4-line-1"></div>
+						<div class="page4-line page4-line-2"></div>
+						<div class="content-second-half">
+							<p class="">
+								Produkowane są z przędzy z teksturowanego włókna bazaltowego.
+								Wykonujemy je w technice dziania, na cylindrycznych głowicach
+								zaplatających, stosując specjalny typ łączenia szydełkowego
+								przędzy S2.
+							</p>
+							<p class="">
+								Takie wykonanie powoduje, że produkt jest mniej sprężysty i
+								bardziej poddaje się modelowaniu w miejscu zastosowania.
+								Podobnie jak produkty S1, stosowane są jako uszczelnienia do
+								połączeń systemów kominowych z urządzeniami grzewczymi, a także
+								do uszczelnienia drzwiczek kominków, pieców lub kotłów.
+							</p>
+							<p class="">
+								Produkujemy wersje z rdzeniem lub bez rdzenia. Zastosowany
+								surowiec powoduje zwiększenie odporności uszczelnienia do 700
+								st.C.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
